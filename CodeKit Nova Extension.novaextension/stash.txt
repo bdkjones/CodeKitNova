@@ -1,0 +1,23 @@
+// This file is just a place to stash stuff I don't want to re-lookup later.
+// Support for the build taskTemplate is going to require some APIs in CodeKit and Nova.
+// This will eventually go into extension.json
+
+"taskTemplates": 
+{
+    "codekitbuild": 
+    {
+        "name": "Build Project in CodeKit",
+        "description": "If the current Nova Workspace is also a Project in CodeKit, builds that Project.",
+        "persistent": true,
+        "task": 
+        {
+            "shell": true,
+            "command": "osascript",
+            "args": [
+                "-e", "beep"
+            ],
+            "env": {
+            }
+        }
+    }
+}

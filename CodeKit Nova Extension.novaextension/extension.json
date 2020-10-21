@@ -1,0 +1,68 @@
+{
+    "identifier": "com.CodeKitApp",
+    "name": "CodeKit",
+    "organization": "Bryan Jones",
+    "description": "Makes Nova and CodeKit work seamlessly together.",
+    "license": "MIT",
+    "repository": "https://github.com/bdkjones/CodeKitNova",
+    "bugs": "https://github.com/bdkjones/CodeKitNova/issues",
+    "version": "1.0",
+    "categories": ["tasks", "commands"],
+    
+    "main": "main.js",
+    
+    "activationEvents": [
+        "*"
+    ],
+    
+    "entitlements": {
+        "process": true,
+        "filesystem": "readonly"
+    },
+    
+    "commands": {
+        "extensions": [
+            {
+                "title": "Build Project",
+                "command": "CodeKit.buildProject"
+            },
+            {
+                "title": "Refresh Project",
+                "command": "CodeKit.refreshProject"
+            },
+            {
+                "title": "Preview in Browser",
+                "command": "CodeKit.previewProject"
+            },
+            {
+                "title": "Show CodeKit",
+                "command": "CodeKit.showApp"
+            }
+        ]
+    },
+    
+    "config": [        
+        {
+            "key": "com.CodeKitApp.autoAddProjects",
+            "title": "Auto-Add Projects",
+            "description": "When you open a new Nova Workspace, should the root folder of that Workspace be automatically added to CodeKit as a Project?",
+            "type": "enum",
+            "values": [
+                ["always", "Every Time a New Workspace Opens"],
+                ["configFile", "When The Workspace Contains a CodeKit Config File", "Never"],
+                ["never", "Never"]
+            ],
+            "default": "configFile"               
+        },
+        {
+            "key": "com.CodeKitApp.autoSwitchProjects",
+            "title": "Auto-Switch CodeKit Projects",
+            "description": "When you open a new Nova Workspace and that Workspace's root folder is also a CodeKit Project, should CodeKit automatically select that Project?",
+            "type": "enum",
+            "values": ["Yes", "No"],
+            "default": "Yes"               
+        }
+    ]
+}
+
+
