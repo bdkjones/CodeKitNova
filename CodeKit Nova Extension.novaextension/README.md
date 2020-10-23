@@ -1,7 +1,7 @@
 ![The CodeKit Application Icon](https://codekitapp.com/images/logo.svg)
 
 # Introduction
-This Extension links Nova and CodeKit (<https://codekitapp.com>) so you can work faster. It requires CodeKit 3.13+ and any version of Nova.
+This Extension links Nova and CodeKit (<https://codekitapp.com>) so you can work faster. It requires CodeKit 3.13+ and Nova 2+.
 
 
 ## Automatic Project-Adding
@@ -25,7 +25,13 @@ If you open a single file in Nova or you open a remote resource that isn't assoc
 
 
 ## The Future
-I'm working with Panic to get some Nova Extension APIs added that will enable more collaboration between Nova and CodeKit. In the future, you'll be able to see file-processing and build events directly in Nova as CodeKit builds a Project. I'm excited to have a first-class, modern, NATIVE editor on macOS again and I look forward to supporting it as much as I can.
+I'm working with Panic to get new Nova APIs added. In the future:
+
+- You'll see file-processing and build log entries directly in Nova.
+- Clicking Nova's Preview button will open CodeKit's Preview Server address.
+- You'll be able to add a "Build with CodeKit" task.
+
+I'm excited to have a first-class, modern, NATIVE editor on macOS again and I look forward to supporting it as much as I can.
 
 
 ## Support
