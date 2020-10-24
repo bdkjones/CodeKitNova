@@ -1,7 +1,7 @@
 {
-    "identifier": "com.CodeKitApp",
+    "identifier": "com.CodeKitApp.Nova",
     "name": "CodeKit",
-    "organization": "CodeKit",
+    "organization": "com.CodeKitApp",
     "description": "Makes Nova and CodeKit work seamlessly together.",
     "license": "MIT",
     "repository": "https://github.com/bdkjones/CodeKitNova",
@@ -47,7 +47,7 @@
     
     "config": [        
         {
-            "key": "com.CodeKitApp.autoAddProjects",
+            "key": "com.CodeKitApp.Nova.autoAddProjects",
             "title": "Auto-Add Projects",
             "description": "When you open a new Nova Workspace, should the root folder of that Workspace be automatically added to CodeKit as a Project?",
             "type": "enum",
@@ -59,7 +59,7 @@
             "default": "configFile"               
         },
         {
-            "key": "com.CodeKitApp.autoSwitchProjects",
+            "key": "com.CodeKitApp.Nova.autoSwitchProjects",
             "title": "Auto-Switch CodeKit Projects",
             "description": "When you open a new Nova Workspace and that Workspace's root folder is also a CodeKit Project, should CodeKit automatically select that Project?",
             "type": "enum",

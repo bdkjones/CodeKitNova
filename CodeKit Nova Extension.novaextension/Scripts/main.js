@@ -60,7 +60,7 @@ function workspaceDidChangePath(newPath)
         return;
     }
     
-    var autoAddProject = nova.config.get('com.CodeKitApp.autoAddProjects');
+    var autoAddProject = nova.config.get('com.CodeKitApp.Nova.autoAddProjects');
     
     // If the Project is already in CodeKit, this command will do nothing. We can safely call it regardless.
     if (autoAddProject == 'configFile')
@@ -90,7 +90,7 @@ function workspaceDidChangePath(newPath)
     // If the Project was newly-added to CodeKit, it automatically gets selected and this call is superfluous. But if the
     // Project was already IN CodeKit (not newly added), this call is necessary because the "add Project" method will not
     // select the given Project if it's already in CodeKit; the method becomes a no-op.
-    var autoSwitchProject = nova.config.get('com.CodeKitApp.autoSwitchProjects');
+    var autoSwitchProject = nova.config.get('com.CodeKitApp.Nova.autoSwitchProjects');
     if (autoSwitchProject == 'Yes')        
     {
         // This does nothing if the Project is already selected OR not in CodeKit.
