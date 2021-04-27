@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="kit">
+    <meta>
+        <name>Kit</name>
+        <type>markup</type>
+        <parent>html</parent>
+        <preferred-file-extension>kit</preferred-file-extension>
+    </meta>
+    
+    <detectors>
+        <extension priority="1.0">kit</extension>
+    </detectors>
+    
+    <comments>
+        <multiline>
+            <starts-with>
+                <expression>&lt;!--</expression>
+            </starts-with>
+            <ends-with>
+                <expression>--&gt;</expression>
+            </ends-with>
+        </multiline>
+    </comments>
+    
+    <template-scopes>
+        <scope name="kit.import">
+            <expression>&lt;!--\s*[@$](import|include)\s+(.*)(?=--&gt;)--&gt;</expression>
+            <capture number="1" name="kit.keyword.import" />
+            <capture number="2" name="kit.string" />
+        </scope>
+
+        <scope name="kit.variable.output">
+            <expression>&lt;!--\s*[@$]([^ =:?]+)(?=--&gt;)--&gt;</expression>
+            <capture number="1" name="kit.identifier.name" />
+        </scope>
+        
+        <scope name="kit.variable.output.optional">
+            <expression>&lt;!--\s*[@$]([^=:?\s]+)\?\s*(?=--&gt;)--&gt;</expression>
+            <capture number="1" name="kit.identifier.name" />
+        </scope>
+
+        <scope name="kit.variable-definition">
+            <expression>&lt;!--\s*[@$]([^=:?\s]+)\s?([=:\s])(.*?)(?=--&gt;)--&gt;</expression>
+            <capture number="1" name="kit.variable-definition.identifier.name" />
+            <capture number="2" name="kit.operator" />
+            <capture number="3" name="kit.variable-definition.identifier.value.string" />
+        </scope>
+
+    </template-scopes>
+    
+    <scopes>
+        <include syntax="html" />
+    </scopes>
+</syntax>
