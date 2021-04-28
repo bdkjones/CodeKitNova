@@ -1,3 +1,9 @@
+## Version 1.2
+
+##### April 2021
+
+- Added Kit Language Syntax & clips
+
 ## Version 1.1
 
 ##### 22 October 2020

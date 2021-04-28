@@ -1,0 +1,23 @@
+{
+	"clips" : [{
+		"name" : "Insert variable value",
+		"trigger" : "val",
+		"content" : "<!-- \\$${:variable}? -->",
+		"scope" : "editor",
+		"syntax" : "html"
+	},
+	{
+		"name" : "Define variable",
+		"trigger" : "var",
+		"content" : "<!-- \\$${:name}: ${:value} -->",
+		"scope" : "editor",
+		"syntax" : "html"
+	},
+	{
+		"name" : "Include file",
+		"trigger" : "inc",
+		"content" : "<!-- @include \"${1:filename}\" -->",
+		"scope" : "editor",
+		"syntax" : "html"
+	}]
+}

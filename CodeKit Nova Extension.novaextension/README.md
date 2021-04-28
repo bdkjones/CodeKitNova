@@ -17,6 +17,16 @@ When you open a new Workspace in Nova and that Workspace's root folder is also a
 ## Additional Commands
 In Nova's "Extensions" menu, you'll find a variety of CodeKit commands that you can trigger from within Nova. This includes building a Project, refreshing a Project, adding the current Workspace's root folder as a new CodeKit Project, and switching to CodeKit itself. Additional commands will come in future updates to this Extension.
 
+## Syntax Highlighting
+Files with the .kit extension will automatically use syntax highlighting for variables and includes/imports.
+
+## Clips
+The extension comes with three clips/snippets:
+
+- **Define variable** (trigger: `var`)
+- **Insert variable value** (trigger: `val`)
+- **Include file** (trigger: `inc`)
+
 
 ## Limitations
 If you have multiple Nova Workspaces open, this Extension cannot currently detect when you switch between them. As such, it cannot auto-switch Projects in CodeKit. Projects will be added and switched *only* when a new Workspace is opened.
